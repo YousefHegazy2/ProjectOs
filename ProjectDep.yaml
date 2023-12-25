@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: members
+
+  template:
+    metadata:
+      name: members
+      labels:
+        app: members
+    spec:
+      containers:
+        - name: container1
+          image: yousef29/project2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9000

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pro2
+spec: 
+  containers:
+    - name: container2
+      image: yousef29/project2
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 9000
